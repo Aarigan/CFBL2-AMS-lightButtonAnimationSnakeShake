@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --clr-blk: #000;
+  --clr-blk1: #2b2b2b;
+  --clr-wht: #fff;
+  --clr-cl: #33f321;
+  --clr-cl1: #a5fc9d;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--clr-blk);
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: var(--clr-cl);
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
+  letter-spacing: 4px;
+  border: none;
+  border-radius: 3px;
+  background: var(--clr-blk1);
+  text-shadow: 0 1px 2px var(--clr-blk);
+  overflow: hidden;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus,
+button:active {
+  color: var(--clr-wht);
+  text-shadow: 0 0 10px var(--clr-cl1),
+    0 0 15px var(--clr-cl1);
+  background: var(--clr-cl);
+  box-shadow: 0 0 10px var(--clr-cl),
+    0 0 40px var(--clr-cl),
+    0 0 80px var(--clr-cl);
+  transition-delay: 1s;
+  opacity: 1;
+  animation: shake 0.75s linear 1;
+}
+
+@keyframes shake {
+  10% {
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+button span {
+  position: absolute;
+  display: block;
+}
+
+button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--clr-cl));
+}
+
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--clr-cl));
+}
+
+button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--clr-cl));
+}
+
+button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--clr-cl));
+}
+
+button:hover span:nth-child(1),
+button:focus span:nth-child(1),
+button:active span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+button:hover span:nth-child(2),
+button:focus span:nth-child(2),
+button:active span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+button:hover span:nth-child(3),
+button:focus span:nth-child(3),
+button:active span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+button:hover span:nth-child(4),
+button:focus span:nth-child(4),
+button:active span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
+
+ 

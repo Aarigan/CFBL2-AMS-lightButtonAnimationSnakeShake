@@ -46,6 +46,7 @@ button {
   background: var(--clr-blk1);
   text-shadow: 0 1px 2px var(--clr-blk);
   overflow: hidden;
+/* outline-color: transparent; */
   transition: all 0.2s ease;
   cursor: pointer;
 }
